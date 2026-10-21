@@ -4,6 +4,8 @@ AgX HDR replaces Unreal Engine's tonemapper with AgX. SDR displays get Blender's
 
 The rest of the built-in tonemapper's work carries over: auto and manual exposure, local exposure, bloom with its dirt mask, lens flares, chromatic aberration, sharpening, vignette, film grain, colour grading, camera fades and dithering. The few things that cannot be carried over are listed under [Known limitations](#known-limitations). The Film slope, toe, shoulder and clip settings, Blue Correction and Tone Curve Amount take effect on every view, including views set to Standard ACES, which ignores them.
 
+Check the comparison files in this repository to see the differences.
+
 ## Requirements
 
 - The desktop renderer at SM5 or above, on Windows, Linux or Mac. The mobile renderer keeps its own tonemapper.
