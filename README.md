@@ -92,7 +92,7 @@ Both are read every frame from the same place the engine's tonemapper reads them
 
 ## Color
 
-Color goes through the AgX formation. After grading, the color is converted to Rec.2020 and pulled slightly toward its own neutral axis (AgX's inset). The curve then runs on each channel separately and the result is pushed back out. Run per channel, the curve makes bright saturated colors drift toward white as they brighten, and 60% of the hue shift this causes is then undone. Finally the color is held inside the display's limiting gamut and below its peak, then written in the display's own gamut.
+Color goes through the AgX formation. After grading, the color is converted to Rec.2020 and pulled slightly toward its own neutral axis (AgX's inset). The curve then runs on each channel separately and the result is pushed back out. Run per channel, the curve makes bright saturated colors drift toward white as they brighten, and 60% of the hue shift this causes is then undone. The 40% kept is the share Blender's AgX keeps. It is a constant in the source (`FormationHueShiftKept` in `AgXHDRFormation.cpp`) rather than a cvar. Finally the color is held inside the display's limiting gamut and below its peak, then written in the display's own gamut.
 
 ## Film settings
 
